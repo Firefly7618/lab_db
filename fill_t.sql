@@ -34,13 +34,13 @@ INSERT INTO films (title, year)
 
 
 INSERT INTO Contests (title, description, finished)
-	VALUES ('Перевод недели', 'офигеть какое подробное описание, все четко, все сразу понятно и ясно, что делать, что бы мы делали без такого крутого описания', '0');
+	VALUES ('Перевод недели', 'офигеть какое подробное описание, все четко, все сразу понятно и ясно, что делать, что бы мы делали без такого крутого описания', 0);
 INSERT INTO Contests (title, description, finished)
-	VALUES ('Лучший стихотворный перевод', 'без описания тут конено вообще не справиться и ни разу не очевидно что надо в стихах писать, дааааааа', '0'); 
+	VALUES ('Лучший стихотворный перевод', 'без описания тут конено вообще не справиться и ни разу не очевидно что надо в стихах писать, дааааааа', 0); 
 INSERT INTO Contests (title, description, finished)
-	VALUES ('Очень крутой конкурс', 'этот конкурс настолько крут что ты просто недостоин в нем участвовать. Отвечаю. Ты протсо дно и больше никто. В этом конкурсе может участвовать только Чак Норрис. А и да, он кстати завершен, так как он его уже выиграл.', '1'); 
+	VALUES ('Очень крутой конкурс', 'этот конкурс настолько крут что ты просто недостоин в нем участвовать. Отвечаю. Ты протсо дно и больше никто. В этом конкурсе может участвовать только Чак Норрис. А и да, он кстати завершен, так как он его уже выиграл.', 1); 
 INSERT INTO Contests (title, description, finished)
-	VALUES ('Худший перевод', 'В этом конкурсе твои шансы велики... Возможно даже стремятся к бесконечности или еще дальше, если такое возможно (в твоем случае да). Нужно просто ВЗЯТЬ И ПЕРЕВЕСТИ, максимально стараясь, и все, ты уже выиграл', '0'); 
+	VALUES ('Худший перевод', 'В этом конкурсе твои шансы велики... Возможно даже стремятся к бесконечности или еще дальше, если такое возможно, a в твоем случае да. Нужно просто ВЗЯТЬ И ПЕРЕВЕСТИ, максимально стараясь, и все, ты уже выиграл', 0); 
 
 
 INSERT INTO genres(name)
@@ -79,5 +79,62 @@ INSERT INTO genres(name)
 	VALUES (q'[classic-rock]');
 INSERT INTO genres(name)
 	VALUES ('metal');
+
+
+
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('adm', q'[adm@gmail.com]', 'passwd000', 1);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user1', q'[email1@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user2', q'[email2@gmail.com]', 'passwd2222', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user3', q'[email3@gmail.com]', 'passwd3333', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user4', q'[email4@gmail.com]', 'passwd4444', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user5', q'[email5@gmail.com]', 'passwd5555', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user6', q'[email6@gmail.com]', 'passwd6666', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user7', q'[email7@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user8', q'[email8@email.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user9', q'[email9@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user10', q'[email10@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user11', q'[email11@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user12', q'[email12@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user13', q'[email13@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user14', q'[email14@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user15', q'[email15@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user16', q'[email16@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user17', q'[email17@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user18', q'[email18@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user19', q'[email19@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user20', q'[email20@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user21', q'[email21@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user22', q'[email22@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user23', q'[email23@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user24', q'[email24@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user25', q'[email25@gmail.com]', 'passwd1111', 0);
+INSERT INTO users (name, email, passwd, admin)
+	VALUES ('user26', q'[email26@gmail.com]', 'passwd1111', 0);
 
 
