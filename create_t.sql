@@ -15,9 +15,8 @@ ALTER TABLE users ADD (CONSTRAINT user_pk PRIMARY KEY(id));
  
 CREATE TABLE contests (
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-    title VARCHAR2(20) NOT NULL,
+    title VARCHAR2(60) NOT NULL,
     description nclob,
-    rating NUMBER,
     finished NUMBER(1) NOT NULL,
     CONSTRAINT check_finished
     CHECK (finished=1 OR finished=0)
@@ -27,7 +26,7 @@ ALTER TABLE contests ADD (CONSTRAINT contest_pk PRIMARY KEY(id));
  
 CREATE TABLE films (
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-    title VARCHAR2(30) NOT NULL,
+    title VARCHAR2(60) NOT NULL,
     YEAR NUMBER(4)
 );
 
@@ -84,8 +83,8 @@ ALTER TABLE Singers_Genres_Description ADD FOREIGN KEY (genre_id) REFERENCES gen
 
 CREATE TABLE News(
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-    title NVARCHAR2(20),
-    description nclob,
+    title NVARCHAR2(20) NOT NULL,
+    description nclob NOT NULL,
     section NVARCHAR2(20),
     publication_date DATE,
     archieved NUMBER(1),
@@ -103,7 +102,7 @@ ALTER TABLE News ADD FOREIGN KEY (author_id) REFERENCES users(id);
 
 CREATE TABLE Albums(
    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-   title VARCHAR2(20),
+   title VARCHAR2(20) NOT NULL,
    year NUMBER(4),
    singer_id NUMBER(12)
 );
@@ -116,12 +115,13 @@ ALTER TABLE Albums ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
 
 CREATE TABLE Songs(
    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-   title VARCHAR2(20),
-   lyrics nclob,
-   rating NUMBER(12),
+   title VARCHAR2(20) NOT NULL,
+   lyrics nclob NOT NULL,
+   rating NUMBER(12) NOT NULL,
    singer_id NUMBER(12),
    album_id NUMBER(12),
-   genre_id NUMBER(12) 
+   genre_id NUMBER(12),
+  CONSTRAINT check_song_rating CHECK (rating >= 0) 
 );
 
 ALTER TABLE Songs ADD (CONSTRAINT songs_pk PRIMARY KEY(id));
@@ -131,12 +131,13 @@ ALTER TABLE Songs ADD FOREIGN KEY (genre_id) REFERENCES genres(id);
 
 CREATE TABLE Songs_Translations(
    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-   title NVARCHAR2(20),
-   translation nclob,
-   rating NUMBER(12),
+   title NVARCHAR2(20) NOT NULL,
+   translation nclob NOT NULL,
+   rating NUMBER(12) NOT NULL,
    publication_date DATE,
    song_id NUMBER(12),
-   author_id NUMBER(12)
+   author_id NUMBER(12),
+  CONSTRAINT check_translation_rating CHECK (rating >= 0)
 );
 
 ALTER TABLE Songs_Translations ADD (CONSTRAINT translation_pk PRIMARY KEY(id));
