@@ -1,0 +1,39 @@
+SET serveroutput ON;
+ 
+CREATE TABLE users (
+    user_id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    nickname VARCHAR2(15) NOT NULL,
+    email VARCHAR2(30) NOT NULL,
+    passwd VARCHAR2(10),
+    admin NUMBER(1) NOT NULL,
+    contests VARCHAR2(20),
+    CONSTRAINT check_adm
+    CHECK (admin=1 OR admin=0)
+);
+ 
+CREATE TABLE contests (
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    title VARCHAR2(20) NOT NULL,
+    description nclob,
+    rating NUMBER,
+    finished NUMBER(1) NOT NULL,
+    CONSTRAINT check_finished
+    CHECK (finished=1 OR finished=0)
+);
+ 
+CREATE TABLE films (
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    title VARCHAR2(30) NOT NULL,
+    YEAR NUMBER(4)
+);
+ 
+CREATE TABLE languages (
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    lang VARCHAR2(20) NOT NULL
+);
+ 
+CREATE TABLE genres (
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    name VARCHAR2(20) NOT NULL,
+    description nclob
+);
