@@ -2,7 +2,7 @@
 INSERT INTO  languages (lang)
          VALUES ('Английский');   
 INSERT INTO  languages (lang)
-         VALUES ('Испанский');
+         VALUES ('Итальянский');
 INSERT INTO  languages (lang)
          VALUES ('Французский');
 INSERT INTO  languages (lang)
@@ -136,5 +136,50 @@ INSERT INTO users (name, email, passwd, admin)
 	VALUES ('user25', q'[email25@gmail.com]', 'passwd1111', 0);
 INSERT INTO users (name, email, passwd, admin)
 	VALUES ('user26', q'[email26@gmail.com]', 'passwd1111', 0);
+
+
+INSERT INTO Singers (name, language_id)
+	VALUES ('The Smiths' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Gary Jules' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Placebo' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Sting' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Whitney Houston' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Celine Dion' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Pixies' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Buddy Holly' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Nena' , 5);
+INSERT INTO Singers (name, language_id)
+	VALUES ('EXO' , 4);
+INSERT INTO Singers (name, language_id)
+	VALUES (q'[f(x)]' , 4);
+INSERT INTO Singers (name, language_id)
+	VALUES ('OH MY GIRL' , 4);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Rammstein' , 5);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Dead or Alive' , 1);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Mylene Farmer' , 3);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Edith Piaf' , 3);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Patricia Kaas' , 3);
+INSERT INTO Singers (name, language_id)
+	VALUES ('ZAZ' , 3);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Andriano Celentano' , 2);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Andrea Bocelli' , 2);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Toto Cutugno' , 2);
+
 
 
