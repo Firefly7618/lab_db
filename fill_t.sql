@@ -50,7 +50,7 @@ INSERT INTO genres(name)
 INSERT INTO genres(name)
 	VALUES (q'[k-pop]');
 INSERT INTO genres(name)
-	VALUES ('dancehall');
+	VALUES ('dance');
 INSERT INTO genres(name)
 	VALUES ('punk');
 
@@ -173,8 +173,6 @@ INSERT INTO Singers (name, language_id)
 INSERT INTO Singers (name, language_id)
 	VALUES ('Patricia Kaas' , 3);
 INSERT INTO Singers (name, language_id)
-	VALUES ('ZAZ' , 3);
-INSERT INTO Singers (name, language_id)
 	VALUES ('Andriano Celentano' , 2);
 INSERT INTO Singers (name, language_id)
 	VALUES ('Andrea Bocelli' , 2);
@@ -182,8 +180,123 @@ INSERT INTO Singers (name, language_id)
 	VALUES ('Toto Cutugno' , 2);
 INSERT INTO Singers (name, language_id)
 	VALUES ('Hurts' , 1);
-
 INSERT INTO Singers (name, language_id)
 	VALUES ('The Beatles' , 1);
+
+
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (1, 10);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (1, 16);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (2, 1);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (2, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (2, 17);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (2, 18);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (3, 10);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (3, 9);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (4, 1);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (4, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (4, 19);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (4, 20);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (4, 11);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (5, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (5, 6);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (5, 21);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (6, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (6, 4);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (6, 1);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (7, 1);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (7, 9);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (8, 7);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (8, 22);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (9, 10);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (10, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (10, 3);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (11, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (11, 3);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (12, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (12, 3);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (13, 15);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (14, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (14, 4);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (14, 19);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (15, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (15, 23);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (15, 19);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (15, 24);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (16, 25);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (17, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (17, 11);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (17, 25);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (18, 24);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (18, 23);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (18, 7);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (18, 1);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (18, 11);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (19, 26);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (19, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (20, 2);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (21, 23);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (21, 19);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (21, 9);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (21, 24);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (22, 7);
+INSERT INTO Singers_Genres_Description (singer_id, genre_id)
+	VALUES (22, 22);
+
+
 
 
