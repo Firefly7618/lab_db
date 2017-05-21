@@ -1,3 +1,5 @@
+DROP TABLE singers;
+
 DROP TABLE users;
 DROP TABLE contests;
 DROP TABLE films;
