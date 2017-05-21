@@ -180,6 +180,8 @@ INSERT INTO Singers (name, language_id)
 	VALUES ('Andrea Bocelli' , 2);
 INSERT INTO Singers (name, language_id)
 	VALUES ('Toto Cutugno' , 2);
+INSERT INTO Singers (name, language_id)
+	VALUES ('Hurts' , 1);
 
 
 
