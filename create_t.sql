@@ -35,7 +35,7 @@ ALTER TABLE films ADD (CONSTRAINT film_pk PRIMARY KEY(id));
  
 CREATE TABLE languages (
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-    lang VARCHAR2(20) NOT NULL UNIQUE
+    lang NVARCHAR2(20) NOT NULL UNIQUE
 );
 
 ALTER TABLE languages ADD (CONSTRAINT lang_pk PRIMARY KEY(id));
@@ -52,9 +52,109 @@ CREATE TABLE singers (
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
     name VARCHAR2(20) NOT NULL UNIQUE,
     description nclob,
-    languageID NUMBER(12)
+    language_id NUMBER(12)
 );
 
 ALTER TABLE singers ADD (CONSTRAINT singer_pk PRIMARY KEY(id));
-ALTER TABLE singers ADD FOREIGN KEY (languageID) REFERENCES languages(id);
+ALTER TABLE singers ADD FOREIGN KEY (language_id) REFERENCES languages(id);
+
+
+CREATE TABLE User_Contests_Description(
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    user_id NUMBER(12),
+    contest_id NUMBER (12)
+);
+
+ALTER TABLE User_Contests_Description ADD (CONSTRAINT user_contest_pk PRIMARY KEY(id));
+ALTER TABLE User_Contests_Description ADD FOREIGN KEY (user_id) REFERENCES users(id);
+ALTER TABLE User_Contests_Description ADD FOREIGN KEY (contest_id) REFERENCES contests(id);
+
+
+CREATE TABLE Singers_Genres_Description(
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    singer_id NUMBER(12),
+    genre_id NUMBER (12)
+);
+
+ALTER TABLE Singers_Genres_Description ADD (CONSTRAINT singer_genre_pk PRIMARY KEY(id));
+ALTER TABLE Singers_Genres_Description ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
+ALTER TABLE Singers_Genres_Description ADD FOREIGN KEY (genre_id) REFERENCES genres(id);
+
+
+
+CREATE TABLE News(
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    title NVARCHAR2(20),
+    description nclob,
+    section NVARCHAR2(20),
+    publication_date DATE,
+    archieved NUMBER(1),
+    show_to_users NUMBER(1),
+    author_id NUMBER(12),
+    singer_id NUMBER(12),
+    CONSTRAINT check_archieved CHECK (archieved=1 OR archieved=0),
+    CONSTRAINT check_show_to_users CHECK (show_to_users=1 OR show_to_users=0)
+);
+
+ALTER TABLE News ADD (CONSTRAINT news_pk PRIMARY KEY(id));
+ALTER TABLE News ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
+ALTER TABLE News ADD FOREIGN KEY (author_id) REFERENCES users(id);
+
+
+CREATE TABLE Albums(
+   id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+   title VARCHAR2(20),
+   year NUMBER(4),
+   singer_id NUMBER(12)
+);
+
+
+ALTER TABLE Albums ADD (CONSTRAINT albums_pk PRIMARY KEY(id));
+ALTER TABLE Albums ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
+
+
+
+CREATE TABLE Songs(
+   id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+   title VARCHAR2(20),
+   lyrics nclob,
+   rating NUMBER(12),
+   singer_id NUMBER(12),
+   album_id NUMBER(12),
+   genre_id NUMBER(12) 
+);
+
+ALTER TABLE Songs ADD (CONSTRAINT songs_pk PRIMARY KEY(id));
+ALTER TABLE Songs ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
+ALTER TABLE Songs ADD FOREIGN KEY (album_id) REFERENCES albums(id);
+ALTER TABLE Songs ADD FOREIGN KEY (genre_id) REFERENCES genres(id);
+
+CREATE TABLE Songs_Translations(
+   id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+   title NVARCHAR2(20),
+   translation nclob,
+   rating NUMBER(12),
+   publication_date DATE,
+   song_id NUMBER(12),
+   author_id NUMBER(12)
+);
+
+ALTER TABLE Songs_Translations ADD (CONSTRAINT translation_pk PRIMARY KEY(id));
+ALTER TABLE Songs_Translations ADD FOREIGN KEY (song_id) REFERENCES songs(id);
+ALTER TABLE Songs_Translations ADD FOREIGN KEY (author_id) REFERENCES users(id);
+
+
+
+CREATE TABLE Songs_Fimls_Description(
+    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
+    song_id NUMBER(12),
+    film_id NUMBER (12)
+);
+
+ALTER TABLE Songs_Fimls_Description ADD (CONSTRAINT song_film_pk PRIMARY KEY(id));
+ALTER TABLE Songs_Fimls_Description ADD FOREIGN KEY (song_id) REFERENCES songs(id);
+ALTER TABLE Songs_Fimls_Description ADD FOREIGN KEY (film_id) REFERENCES films(id);
+
+
+
 
