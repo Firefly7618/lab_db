@@ -181,5 +181,7 @@ INSERT INTO Singers (name, language_id)
 INSERT INTO Singers (name, language_id)
 	VALUES ('Toto Cutugno' , 2);
 
+INSERT INTO Singers (name, language_id)
+	VALUES ('The Beatles' , 1);
 
 
