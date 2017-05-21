@@ -66,7 +66,7 @@ INSERT INTO genres(name)
 INSERT INTO genres(name)
 	VALUES ('trance');
 INSERT INTO genres(name)
-	VALUES ('indie');
+	VALUES (q'[indie-rock]');
 INSERT INTO genres(name)
 	VALUES ('alternative');
 INSERT INTO genres(name)
@@ -79,7 +79,28 @@ INSERT INTO genres(name)
 	VALUES (q'[classic-rock]');
 INSERT INTO genres(name)
 	VALUES ('metal');
-
+INSERT INTO genres(name)
+	VALUES ('post-punk');
+INSERT INTO genres(name)
+	VALUES ('folk');
+INSERT INTO genres(name)
+	VALUES ('soft rock');
+INSERT INTO genres(name)
+	VALUES ('new wave');
+INSERT INTO genres(name)
+	VALUES ('reggae');
+INSERT INTO genres(name)
+	VALUES ('soul');
+INSERT INTO genres(name)
+	VALUES ('beat');
+INSERT INTO genres(name)
+	VALUES ('synthpop');
+INSERT INTO genres(name)
+	VALUES (q'[pop-rock]');
+INSERT INTO genres(name)
+	VALUES ('chanson');
+INSERT INTO genres(name)
+	VALUES ('opera');
 
 
 INSERT INTO users (name, email, passwd, admin)
@@ -138,6 +159,7 @@ INSERT INTO users (name, email, passwd, admin)
 	VALUES ('user26', q'[email26@gmail.com]', 'passwd1111', 0);
 
 
+
 INSERT INTO Singers (name, language_id)
 	VALUES ('The Smiths' , 1);
 INSERT INTO Singers (name, language_id)
@@ -183,6 +205,7 @@ INSERT INTO Singers (name, language_id)
 INSERT INTO Singers (name, language_id)
 	VALUES ('The Beatles' , 1);
 
+commit;
 
 INSERT INTO Singers_Genres_Description (singer_id, genre_id)
 	VALUES (1, 10);

@@ -2,11 +2,10 @@ SET serveroutput ON;
  
 CREATE TABLE users (
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-    nickname VARCHAR2(15) NOT NULL UNIQUE,
+    name VARCHAR2(15) NOT NULL UNIQUE,
     email VARCHAR2(30) NOT NULL UNIQUE,
-    passwd VARCHAR2(10),
+    passwd VARCHAR2(10) NOT NULL,
     admin NUMBER(1) NOT NULL,
-    contests VARCHAR2(20),
     CONSTRAINT check_adm
     CHECK (admin=1 OR admin=0)
 );
@@ -156,6 +155,6 @@ ALTER TABLE Songs_Fimls_Description ADD (CONSTRAINT song_film_pk PRIMARY KEY(id)
 ALTER TABLE Songs_Fimls_Description ADD FOREIGN KEY (song_id) REFERENCES songs(id);
 ALTER TABLE Songs_Fimls_Description ADD FOREIGN KEY (film_id) REFERENCES films(id);
 
-
+commit;
 
 
