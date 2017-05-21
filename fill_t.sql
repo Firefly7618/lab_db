@@ -41,6 +41,8 @@ INSERT INTO Contests (title, description, finished)
 	VALUES ('Очень крутой конкурс', 'этот конкурс настолько крут что ты просто недостоин в нем участвовать. Отвечаю. Ты протсо дно и больше никто. В этом конкурсе может участвовать только Чак Норрис. А и да, он кстати завершен, так как он его уже выиграл.', 1); 
 INSERT INTO Contests (title, description, finished)
 	VALUES ('Худший перевод', 'В этом конкурсе твои шансы велики... Возможно даже стремятся к бесконечности или еще дальше, если такое возможно, a в твоем случае да. Нужно просто ВЗЯТЬ И ПЕРЕВЕСТИ, максимально стараясь, и все, ты уже выиграл', 0); 
+INSERT INTO Contests (title, description, finished)
+	VALUES ('Средненький перевод', 'Самый подходящий конкурс для таких серых посредственностей, как ты. Обязательно попробуй свои силы, на бОльшее тебе и рассчитывать не стоит. Урод.', 1); 
 
 
 INSERT INTO genres(name)
@@ -319,7 +321,74 @@ INSERT INTO Singers_Genres_Description (singer_id, genre_id)
 	VALUES (22, 7);
 INSERT INTO Singers_Genres_Description (singer_id, genre_id)
 	VALUES (22, 22);
+commit;
 
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('The Queen Is Dead', 1986, 1);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Trading Snakeoil for Wolftickets', 2001, 2);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Without You I’m Nothing', 1998, 3);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Ten Summoner’s Tales', 1993, 4);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('The Bodyguard OST', 1992, 5);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Let’s Talk About Love', 1997, 6);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Surfer Rosa', 1988, 7);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Buddy Holly', 1958, 8);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Nena Live', 1995, 9);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('XOXO', 2013, 10);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Exodus', 2015, 10);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('ExAct', 2015, 10);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Pink Tape', 2013, 11);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Red Light', 2014, 11);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Closer', 2015, 12);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Pink Ocean', 2016, 12);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Liebe ist für alle da', 2009, 13);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Mutter', 2001, 13);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('Youthquake', 1985, 14);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 15);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 16);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 17);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 18);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 19);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 20);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 21);
+INSERT INTO Albums (title, year, singer_id)
+	VALUES ('unknown', 2000, 22);
 
+commit;
+
+INSERT INTO User_Contests_Description (user_id, contest_id)
+	VALUES (10, 10);
+INSERT INTO User_Contests_Description (user_id, contest_id)
+	VALUES (10, 5);
+INSERT INTO User_Contests_Description (user_id, contest_id)
+	VALUES (15, 3);
+INSERT INTO User_Contests_Description (user_id, contest_id)
+	VALUES (14, 2);
+INSERT INTO User_Contests_Description (user_id, contest_id)
+	VALUES (3, 2);
 
 
