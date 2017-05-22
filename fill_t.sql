@@ -391,4 +391,9 @@ INSERT INTO User_Contests_Description (user_id, contest_id)
 INSERT INTO User_Contests_Description (user_id, contest_id)
 	VALUES (3, 2);
 
+commit;
 
+INSERT INTO News (title, description, archieved, show_to_users, author_id, singer_id)
+	VALUES ('EXO - азиаты', 'ВНИМАНИЕ ВНИМАНИЕ ВАЖНОЕ ОБЪЯВЛЕНИЕ, EXO оказывается азиаты, об этом никто раньше не догадывался, ваааау. Спасибо за внимание.', 0, 1, 1, 10);
+INSERT INTO News (title, description, archieved, show_to_users, author_id)
+	VALUES ('Очень крутая новость из мира музыка', 'Новость безумно важная просто безумно-безумно.', 0, 1, 1);
