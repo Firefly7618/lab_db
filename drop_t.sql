@@ -16,3 +16,4 @@ DROP TABLE films;
 DROP TABLE languages;
 DROP TABLE genres;
 
+commit;
