@@ -447,11 +447,43 @@ INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
 	VALUES ('Illuminated', 'la la la', 8, 21, 26, 19)
 INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
 	VALUES ('eight days a week', 'la la la', 8, 22, 27, 7)
-=======
+
 commit;
->>>>>>> 73da48e54291199fa0621c78b910eb1284a24e06
+
 
 INSERT INTO News (title, description, archieved, show_to_users, author_id, singer_id)
-	VALUES ('EXO - азиаты', 'ВНИМАНИЕ ВНИМАНИЕ ВАЖНОЕ ОБЪЯВЛЕНИЕ, EXO оказывается азиаты, об этом никто раньше не догадывался, ваааау. Спасибо за внимание.', 0, 1, 1, 10);
+	VALUES ('EXO - азиаты', 'ВНИМАНИЕ ВНИМАНИЕ ВАЖНОЕ ОБЪЯВЛЕНИЕ, EXO оказывается азиаты, об этом никто раньше не догадывался, ваааау. Спасибо за внимание. (Иди в жопу, Юля)', 0, 1, 1, 10);
 INSERT INTO News (title, description, archieved, show_to_users, author_id)
 	VALUES ('Очень крутая новость из мира музыка', 'Новость безумно важная просто безумно-безумно.', 0, 1, 1);
+INSERT INTO News (title, description, archieved, show_to_users, author_id)
+	VALUES ('ШОК! Сенсация!!!', 'Эта новость повергла всех в шок. Юля снова попыталась шутить! К сожалению, снова не смешно.', 0, 1, 4);
+INSERT INTO News (title, description, archieved, show_to_users, author_id)
+	VALUES ('Учёные в шоке!', 'оказываются, только эти три продукта сжигают жир!', 0, 1, 7);
+INSERT INTO News (title, description, archieved, show_to_users, author_id)
+	VALUES ('Три знака зодиака выживут в 2018 году', 'Ванга назвала 3 знака, которые выживут в следующем году', 0, 1, 5);
+INSERT INTO News (title, description, archieved, show_to_users, author_id)
+	VALUES ('Девять знаков зодиака не выживут в 2018 году', 'Ванга назвала 9 знаков, которые не выживут в следующем году', 0, 1, 4);
+INSERT INTO News (title, description, archieved, show_to_users, author_id)
+	VALUES ('ПОЖАЛУЙСТА. ПРОШУ ВАС.', '......Поставьте нам зачёт, пожалуйста....', 0, 1, 9);
+
+commit;
+
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (1, 10);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (2, 8);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (3, 2);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (4, 1);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (5, 7);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (6, 5);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (7, 4);
+INSERT INTO Songs_Fimls_Description (song_id, film_id)
+	VALUES (8, 3);
+
+commit;
+
