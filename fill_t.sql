@@ -160,7 +160,7 @@ INSERT INTO users (name, email, passwd, admin)
 INSERT INTO users (name, email, passwd, admin)
 	VALUES ('user26', q'[email26@gmail.com]', 'passwd1111', 0);
 
-
+commit;
 
 INSERT INTO Singers (name, language_id)
 	VALUES ('The Smiths' , 1);
@@ -321,7 +321,7 @@ INSERT INTO Singers_Genres_Description (singer_id, genre_id)
 	VALUES (22, 7);
 INSERT INTO Singers_Genres_Description (singer_id, genre_id)
 	VALUES (22, 22);
-commit;
+
 
 INSERT INTO Albums (title, year, singer_id)
 	VALUES ('The Queen Is Dead', 1986, 1);
@@ -362,26 +362,26 @@ INSERT INTO Albums (title, year, singer_id)
 INSERT INTO Albums (title, year, singer_id)
 	VALUES ('Youthquake', 1985, 14);
 INSERT INTO Albums (title, year, singer_id)
-	VALUES ('unknown', 2000, 15);
+	VALUES ('Monkey Me', 2013, 15);
 INSERT INTO Albums (title, year, singer_id)
 	VALUES ('unknown', 2000, 16);
 INSERT INTO Albums (title, year, singer_id)
-	VALUES ('unknown', 2000, 17);
+	VALUES ('Mademoiselle chante...', 1988, 17);
 INSERT INTO Albums (title, year, singer_id)
-	VALUES ('unknown', 2000, 18);
+	VALUES ('Per sempre', 2002, 18);
 INSERT INTO Albums (title, year, singer_id)
 	VALUES ('unknown', 2000, 19);
 INSERT INTO Albums (title, year, singer_id)
 	VALUES ('unknown', 2000, 20);
 INSERT INTO Albums (title, year, singer_id)
-	VALUES ('unknown', 2000, 21);
+	VALUES ('Happiness', 2011, 21);
 INSERT INTO Albums (title, year, singer_id)
-	VALUES ('unknown', 2000, 22);
+	VALUES ('Beatles for Sale', 1964, 22);
 
 commit;
 
 INSERT INTO User_Contests_Description (user_id, contest_id)
-	VALUES (10, 10);
+	VALUES (10, 4);
 INSERT INTO User_Contests_Description (user_id, contest_id)
 	VALUES (10, 5);
 INSERT INTO User_Contests_Description (user_id, contest_id)
@@ -390,5 +390,60 @@ INSERT INTO User_Contests_Description (user_id, contest_id)
 	VALUES (14, 2);
 INSERT INTO User_Contests_Description (user_id, contest_id)
 	VALUES (3, 2);
+commit;
 
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('There is a light that never goes out', 'la la la', 8, 1, 1, 10)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Mad world', 'la la la', 8, 2, 2, 1)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Every me every you', 'la la la', 8, 3, 3, 9)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Shape of my heart', 'la la la', 8, 4, 4, 2)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('I will always love you', 'la la la', 8, 5, 5, 6)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('My heart will go on', 'la la la', 8, 6, 6, 4)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Where is my mind?', 'la la la', 8, 7, 7, 9)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Everyday', 'la la la', 8, 8, 8, 22)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('99 Luftballons', 'la la la', 8, 9, 9, 10)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('My lady', 'la la la', 8, 10, 10, 2)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Love me right', 'la la la', 8, 10, 11, 3)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Monster', 'la la la', 8, 10, 12, 2)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Airplane', 'la la la', 8, 11, 13, 3)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Paper heart', 'la la la', 8, 11, 14, 2)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Closer', 'la la la', 8, 12, 15, 3)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Liar Liar', 'la la la', 8, 12, 16, 2)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Pussy', 'la la la', 8, 13, 17, 15)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Ich will', 'la la la', 8, 13, 18, 15)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('You spin me right round (Like a record)', 'la la la', 8, 14, 19, 19)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Je Te Dis Tout', 'la la la', 8, 15, 20, 23)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Padam Padam', 'la la la', 8, 16, 21, 25)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Quand Jimmy Dit', 'la la la', 8, 17, 22, 11)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Confesa', 'la la la', 8, 18, 23, 24)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('ne znau', 'la la la', 8, 19, 24, 26)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('kto eto', 'la la la', 8, 20, 25, 2)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('Illuminated', 'la la la', 8, 21, 26, 19)
+INSERT INTO Songs (title, lyrics, rating, singer_id, album_id, genre_id)
+	VALUES ('eight days a week', 'la la la', 8, 22, 27, 7)
 
