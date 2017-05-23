@@ -484,7 +484,28 @@ INSERT INTO Songs_Fimls_Description (song_id, film_id)
 	VALUES (7, 4);
 INSERT INTO Songs_Fimls_Description (song_id, film_id)
 	VALUES (8, 3);
---commit;
 
---INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
---	VALUES ('', '', 8, '2008-11-11', 1, 2);
+commit;
+
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Свет, который никогда не исчезнет', 'ля-ля-ля', 8, '01-01-98', 1, 2);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Чокнутый мир', 'ля-ля-ля', 8, '07-01-13', 2, 7);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Монстр', 'ля-ля-ля', 8, '09-06-16', 12, 2);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Монстр', 'ля-ля-ля', 8, '09-06-16', 12, 2);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Кися', 'хэндэхох', 8, '09-06-16', 17, 6);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Самолёт', 'ля-ля-ля', 8, '05-08-13', 13, 2);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('8 дней в неделю', 'ля-ля-ля', 8, '05-11-03', 27, 4);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('99 воздушных шариков', 'ля-ля-ля', 8, '09-06-16', 9, 6);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Бумажное сердце', 'ля-ля-ля', 9, '05-08-13', 14, 2);
+INSERT INTO Songs_Translations (title, translation, rating, publication_date, song_id, author_id)
+	VALUES ('Тыц Тыц', 'ля-ля-ля', 8, '05-04-98', 21, 2);
+
+commit;
