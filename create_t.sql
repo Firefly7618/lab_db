@@ -50,7 +50,7 @@ CREATE TABLE singers (
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
     name VARCHAR2(20) NOT NULL UNIQUE,
     description nclob,
-    language_id NUMBER(12)
+    language_id NUMBER(12) NOT NULL
 );
 
 ALTER TABLE singers ADD (CONSTRAINT singer_pk PRIMARY KEY(id));
@@ -127,11 +127,10 @@ CREATE TABLE Songs(
    title VARCHAR2(60) NOT NULL,
    lyrics nclob NOT NULL,
    rating NUMBER(12) NOT NULL,
-   singer_id NUMBER(12),
+   singer_id NUMBER(12) NOT NULL,
    album_id NUMBER(12),
    genre_id NUMBER(12),
-   language_id NUMBER(12),
-  CONSTRAINT check_song_rating CHECK (rating >= 0) 
+   language_id NUMBER(12)
 );
 
 ALTER TABLE Songs ADD (CONSTRAINT songs_pk PRIMARY KEY(id));
