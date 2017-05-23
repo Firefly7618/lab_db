@@ -166,6 +166,7 @@ CREATE TABLE Songs_Fimls_Description(
 ALTER TABLE Songs_Fimls_Description ADD (CONSTRAINT song_film_pk PRIMARY KEY(id));
 ALTER TABLE Songs_Fimls_Description ADD FOREIGN KEY (song_id) REFERENCES songs(id);
 ALTER TABLE Songs_Fimls_Description ADD FOREIGN KEY (film_id) REFERENCES films(id);
+ALTER TABLE Songs_Fimls_Description ADD CONSTRAINT unique_songs_films UNIQUE(song_id, film_id);
 
 commit;
 
