@@ -82,7 +82,7 @@ ALTER TABLE Singers_Genres_Description ADD FOREIGN KEY (genre_id) REFERENCES gen
 
 CREATE TABLE News(
     id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-    title NVARCHAR2(20) NOT NULL,
+    title NVARCHAR2(60) NOT NULL,
     description nclob NOT NULL,
     section NVARCHAR2(20),
     publication_date DATE,
@@ -128,11 +128,11 @@ ALTER TABLE Songs ADD (CONSTRAINT songs_pk PRIMARY KEY(id));
 ALTER TABLE Songs ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
 ALTER TABLE Songs ADD FOREIGN KEY (album_id) REFERENCES albums(id);
 ALTER TABLE Songs ADD FOREIGN KEY (genre_id) REFERENCES genres(id);
-ALTER TABLE Songs ADD FOREIGN KEY (languages_id) REFERENCES languages(id);
+ALTER TABLE Songs ADD FOREIGN KEY (language_id) REFERENCES languages(id);
 
 CREATE TABLE Songs_Translations(
    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
-   title NVARCHAR2(20) NOT NULL,
+   title NVARCHAR2(60) NOT NULL,
    translation nclob NOT NULL,
    rating NUMBER(12) NOT NULL,
    publication_date DATE,
