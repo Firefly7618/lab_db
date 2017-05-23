@@ -120,6 +120,7 @@ CREATE TABLE Songs(
    singer_id NUMBER(12),
    album_id NUMBER(12),
    genre_id NUMBER(12),
+   language_id NUMBER(12),
   CONSTRAINT check_song_rating CHECK (rating >= 0) 
 );
 
@@ -127,6 +128,7 @@ ALTER TABLE Songs ADD (CONSTRAINT songs_pk PRIMARY KEY(id));
 ALTER TABLE Songs ADD FOREIGN KEY (singer_id) REFERENCES singers(id);
 ALTER TABLE Songs ADD FOREIGN KEY (album_id) REFERENCES albums(id);
 ALTER TABLE Songs ADD FOREIGN KEY (genre_id) REFERENCES genres(id);
+ALTER TABLE Songs ADD FOREIGN KEY (languages_id) REFERENCES languages(id);
 
 CREATE TABLE Songs_Translations(
    id NUMBER(12) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1),
