@@ -7,6 +7,11 @@ AS
 l_language_index Languages.id%TYPE;
 
 BEGIN
+	IF l_singer_name is NULL OR l_language IS NULL THEN
+		dbms_output.put_line('Нельзя NULL передавать, ну!');		
+		RETURN;
+	END IF;	
+
 	BEGIN
 		SELECT id INTO l_language_index
 			FROM Languages
