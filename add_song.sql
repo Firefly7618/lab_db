@@ -85,6 +85,7 @@ BEGIN
 		INSERT INTO Songs(title, lyrics, rating, singer_id, album_id, genre_id, language_id)
 			VALUES(l_title, l_lyrics, 0, l_singer_index, l_album_index, l_genre_index, l_language_index);
 		dbms_output.put_line('Песня добавлена!');
+		resolve_film_songs(l_song_index, l_film);
 	END;
 
 	
