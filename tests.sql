@@ -13,43 +13,10 @@ commit;
 
 BEGIN
 	add_song('rolling stones', 'title', 'lyrics', 'album', 'genre','Английский', 'film');
-END;
-/
-
-commit;
-
-BEGIN
 	add_song('rolling stones', 'title2', 'lyrics', 'album', 'genre','Английский', 'film');
-END;
-/
-
-commit;
-
-
-BEGIN
 	add_song('rolling stones', 'title3', 'lyrics', 'album2', 'genre','Английский', 'film');
-END;
-/
-
-commit;
-
-
-BEGIN
 	add_song('rolling stones2', 'title3', 'lyrics', 'album2', 'genre','Английский', 'film');
-END;
-/
-
-commit;
-
-
-BEGIN
 	add_song('rolling stones', 'title4', 'lyrics', 'album2', 'genre2','Английский', 'film');
-END;
-/
-
-commit;
-
-BEGIN
 	add_song('rolling stones2', 'title4', 'lyrics', 'album2', 'genre2','Английский2', 'film');
 END;
 /
@@ -71,4 +38,15 @@ BEGIN
 add_user('user3', 'dfkdfddfheh@frr.ef', 'dfjg', 1);
 END;
 /
+commit;
+
+--тесты для проверки добавления переводов. 1,2 должны пройти. 3,4 - нет
+BEGIN
+	add_translation('title','rolling stones', 'translation title', 'translation', 'user1');
+	add_translation('title','rolling stones', 'translation title', 'translation', 'user1');
+	add_translation('title','rolling stones34', 'translation title', 'translation', 'user1');
+	add_translation('title12345','rolling stones', 'translation title', 'translation', 'user1'); 
+END;
+/
+
 commit;
