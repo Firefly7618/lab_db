@@ -55,3 +55,20 @@ END;
 /
 
 commit;
+
+BEGIN
+add_user('user123', 'dfkdf@sdhfhf.ru', 'dfjg', 3);
+END;
+/
+commit;
+
+BEGIN
+add_user('user5657', 'dfkdfddfhehfrref', 'dfjg', 1);
+END;
+/
+commit;
+BEGIN
+add_user('user3', 'dfkdfddfheh@frr.ef', 'dfjg', 1);
+END;
+/
+commit;
