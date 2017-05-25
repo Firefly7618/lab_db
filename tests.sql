@@ -50,3 +50,10 @@ END;
 /
 
 commit;
+
+BEGIN
+delete_song('Everyday', 'Buddy Holly');
+delete_song('Хорошая песня', 'Макс Корж');
+END;
+/
+commit;
