@@ -9,6 +9,10 @@ id_song NUMBER(12);
 id_singer NUMBER(12);
 
 BEGIN
+	IF l_singer_name IS NULL OR l_title IS NULL THEN
+		dbms_output.put_line('Нельзя NULL передавать, ну!');
+		RETURN;	
+	END IF;
 	BEGIN
 		SELECT id INTO id_singer FROM singers WHERE name = l_singer_name;
 		EXCEPTION	
