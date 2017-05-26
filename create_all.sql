@@ -6,6 +6,7 @@
 @/home/oracle/lab/lab_db/update_album.sql
 @/home/oracle/lab/lab_db/add_translation.sql
 @/home/oracle/lab/lab_db/get_user_rating.sql
+@/home/oracle/lab/lab_db/test_get_rating.sql
 @/home/oracle/lab/lab_db/delete_song.sql
 
 commit;
