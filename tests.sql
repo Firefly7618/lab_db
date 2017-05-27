@@ -25,16 +25,7 @@ commit;
 
 BEGIN
 add_user('user123', 'dfkdf@sdhfhf.ru', 'dfjg', 3);
-END;
-/
-commit;
-
-BEGIN
 add_user('user5657', 'dfkdfddfhehfrref', 'dfjg', 1);
-END;
-/
-commit;
-BEGIN
 add_user('user3', 'dfkdfddfheh@frr.ef', 'dfjg', 1);
 END;
 /
@@ -42,10 +33,10 @@ commit;
 
 --тесты для проверки добавления переводов. 1,2 должны пройти. 3,4 - нет
 BEGIN
-	add_translation('title','rolling stones', 'translation title', 'translation', 'user1');
-	add_translation('title','rolling stones', 'translation title', 'translation', 'user1');
-	add_translation('title','rolling stones34', 'translation title', 'translation', 'user1');
-	add_translation('title12345','rolling stones', 'translation title', 'translation', 'user1'); 
+	add_translation('title','rolling stones', 'translation title', 'translation', 'user3');
+	add_translation('title','rolling stones', 'translation title', 'translation', 'user3');
+	add_translation('title','rolling stones34', 'translation title', 'translation', 'user3');
+	add_translation('title12345','rolling stones', 'translation title', 'translation', 'user3'); 
 END;
 /
 
@@ -56,4 +47,12 @@ delete_song('Everyday', 'Buddy Holly');
 delete_song('Хорошая песня', 'Макс Корж');
 END;
 /
+
+UPDATE Songs_Translations SET rating=4 WHERE author_id=3;
+
 commit;
+
+BEGIN
+	test_get_rating();
+END;
+/
